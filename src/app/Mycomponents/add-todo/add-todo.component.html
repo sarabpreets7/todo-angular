@@ -1,0 +1,37 @@
+<!-- <span style="padding: 12px 20px 12px 20px;margin-bottom: 40px; background-color: #DB4C3F;color: white;border-radius: 6px;">Add Task</span> -->
+<div class="my-3" style="width: 100%;">
+
+    <!-- <form (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="exampleInputEmail1">Todo Title</label>
+            <input type="text" [(ngModel)]="title" class="form-label" name="title" class="form-control"
+                id="exampleInputEmail1" aria-describedby="emailHelp">
+
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1">Todo Description</label>
+            <input type="text" class="form-label" [(ngModel)]="desc" name="desc" class="form-control"
+                id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check">
+
+        </div>
+        <button type="submit" style="background-color: #DB4C3F; border: none;" class="btn btn-primary">Add Task</button>
+    </form> -->
+
+<div id="form" class="form-container">
+    <form (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+
+            <input type="text" [(ngModel)]="title" class="form-label" name="title" placeholder="tittle"
+                class="form-control">
+        </div>
+        <div class="mb-3">
+
+            <textarea placeholder="description" [(ngModel)]="desc" name="desc" class="form-control" id="exampleFormControlTextarea1"
+                rows="3"></textarea>
+        </div>
+        <button type="submit" style="background-color: #DB4C3F; border: none;" class="btn btn-primary">Add Task</button>
+    </form>
+
+</div>

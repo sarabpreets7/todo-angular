@@ -1,0 +1,64 @@
+<nav class="sidebar" id="sidebar">
+
+    <!-- <div class="sidebar-header">
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fas fa-align-left"></i>
+                <span>Toggle Sidebar</span>
+            </button>
+        </div> -->
+
+    <ul class="list-unstyled components">
+
+        <li class="Inbox active">
+            <a routerLink="" href="#homeSubmenu"
+                style="display: flex;align-items: center;justify-content: space-between;" data-toggle="collapse"
+                aria-expanded="false" (click)="handleSelection()"> <span
+                    style="display: flex;align-items: center;"><span style="margin-right: 12px;color:#256FE0"
+                        class="material-icons">
+                        move_to_inbox
+                    </span>Inbox</span><span style="color: gray; ">{{this.todosLength}}</span></a>
+            <!-- <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="#">Home 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 3</a>
+                    </li>
+                </ul> -->
+        </li>
+        <li class="Today">
+            <a routerLink="today" href="#" style="display: flex;align-items: center;" (click)="handleSelection()">
+                <mat-icon style="margin-right: 10px;color: #398628;">today</mat-icon>Today
+            </a>
+        </li>
+        <li>
+            <a href="#pageSubmenu" style="display: flex;align-items: center;" data-toggle="collapse"
+                aria-expanded="false" (click)="handleSelection()"><span style="margin-right: 10px;color: #8E66D0;"
+                    class="material-icons">
+                    move_to_inbox
+                </span>Upcoming</a>
+            <!-- <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Page 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 3</a>
+                    </li>
+                </ul> -->
+        </li>
+        <!-- <li>
+                <a href="#">Portfolio</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li> -->
+    </ul>
+
+
+</nav>

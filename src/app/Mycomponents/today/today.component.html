@@ -1,0 +1,29 @@
+<div style="width: 60vw;padding: 30px 0px 30px 100px;">
+    <!-- <app-todos style="z-index: 1;width: 100%;background-color: red;"></app-todos> -->
+    <span style="display: flex;align-items: flex-end;margin-bottom: 25px;">
+        <h4 style="font-weight: 600;margin-right: 10px;">Today</h4>{{currDate}}
+    </span>
+    <div style="z-index: 1;width: 100%;">
+        <div style="display: flex;flex-direction: column;">
+
+            <div *ngIf="this.todayTodos.length===0; else elseBlock">No todos to display!</div>
+            <ng-template #elseBlock>
+
+                <div style="display: flex;flex-direction: column; width: 100%;">
+                    <div *ngFor="let todo of todayTodos">
+                        <app-todo-item [todo]="todo">
+                        </app-todo-item>
+
+                    </div>
+                </div>
+            </ng-template>
+
+            <!-- <app-add-todo style="width: 100%;margin-top: 80px;" (todoAdd)="addToDo($event)"></app-add-todo> -->
+
+        </div>
+
+    </div>
+
+
+
+</div>

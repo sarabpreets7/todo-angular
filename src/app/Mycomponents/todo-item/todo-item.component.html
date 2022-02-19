@@ -1,0 +1,10 @@
+<div style="margin-bottom: 0px;display: flex;flex-direction: column;position: relative;width: 100%;">
+    <input [checked]="!todo.active" (click)="onCheckboxClick(todo)" style="position: absolute;left: -22px;top: 3px;" type="checkbox" id="horns" name="horns">
+
+    <span style="margin-bottom: 0px;display: flex;flex-direction: column;justify-content: center;align-items: flex-start;"><h6 style="display: flex;align-items: center;" [ngClass]="{'strike': !todo.active}">{{todo.title}}  <mat-icon (click)="onClick(todo)">delete_forever</mat-icon></h6> <p class="text-break" style="color: gray;">{{todo.desc}}</p></span>
+    <span style="margin-top: 0px;color: #DD544D;margin-bottom: 15px;">{{elapsedTime}}</span>
+     <hr style="margin-top: 0px;"/>
+     
+</div>
+
+

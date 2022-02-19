@@ -1,0 +1,16 @@
+<div style="display: flex;flex-direction: column;width: 100%;">
+
+    <div *ngIf="this.todos.length===0; else elseBlock">No todos to display!</div>
+    <ng-template #elseBlock>
+        <div style="display: flex;flex-direction: column; width: 100%;">
+            <div *ngFor="let todo of todos">
+                <app-todo-item (todoCheckBox)="toggleTodo($event)" [todo]="todo" (todoDelete)="deleteTodo($event)">
+                </app-todo-item>
+
+            </div>
+        </div>
+    </ng-template>
+
+    <app-add-todo style="width: 100%;margin-top: 80px;" (todoAdd)="addToDo($event)"></app-add-todo>
+
+</div>
